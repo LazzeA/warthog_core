@@ -424,5 +424,12 @@
     <origin xyz="0 0 0.69" rpy="0 0 0" />  
   </xacro:VLP-16>
 
+  <!--generic camera-->
+  <xacro:include filename="$(find warthog_description)/urdf/accessories/generic_camera.urdf.xacro" />
+  <xacro:generic_camera name="camera" parent="top_chassis_link" ros_topic="image_raw" cam_info_topic="camera_info" update_rate="30" res_x="800" res_y="600" image_format="R8G8B8" hfov="50">
+    <origin xyz="0.63 0 0.2" rpy="0 0 0"/>
+  </xacro:generic_camera>
+
+
 
 </robot>
